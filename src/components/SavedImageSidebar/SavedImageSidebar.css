@@ -1,0 +1,21 @@
+.saved-image-sidebar {
+  height: 75vh;
+  width: 100%;
+  padding-left: 5vw;
+  border-left: solid rgb(245, 245, 245);
+}
+.saved-image-link {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+.saved-image-link a {
+  color: 'rgb(47, 22, 173)';
+  text-decoration: none;
+}
+.saved-image-link img {
+  position: relative;
+  top: 0.15rem;
+  margin-left: 0.5rem;
+}
