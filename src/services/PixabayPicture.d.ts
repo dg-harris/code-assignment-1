@@ -1,16 +1,17 @@
-declare interface PixabayPicture {
+declare interface PixabayImage {
   id: number
   pageURL: string
   type: string
-  tags: string
+  tags: string[]
   previewURL: string
   previewWidth: number
   previewHeight: number
   webformatURL: string
   webformatWidth: number
   webformatHeight: number
-  largepageURL: string
+  largeImageURL: string
   fullHDURL: string
+  imageURL: string
   pageURL: string
   imageWidth: number
   imageHeight: number
@@ -22,5 +23,5 @@ declare interface PixabayPicture {
   comments: number
   user_id: number
   user: string
-  userpageURL: string
+  userImageURL: string
 }

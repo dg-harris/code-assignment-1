@@ -2,10 +2,6 @@ import React from 'react'
 import './SavedImageSidebar.css'
 import { Icon } from 'semantic-ui-react'
 
-interface ImageLinkData {
-  id: number
-  pageURL: string
-}
 export const SavedImageSidebar: React.FC<{ savedImages?: ImageLinkData[] }> = ({
   savedImages = [],
 }) => {
@@ -21,7 +17,7 @@ export const SavedImageSidebar: React.FC<{ savedImages?: ImageLinkData[] }> = ({
 
 const SavedImageLink: React.FC<ImageLinkData> = ({ id, pageURL }) => (
   <div className="saved-image-link">
-    <a href={pageURL}>
+    <a href={pageURL} target="_blank" rel="noopener noreferrer">
       #{id}
       {/* <img src={openInNewIcon} alt="open-in-new-window" /> */}
       <Icon name="external alternate" />

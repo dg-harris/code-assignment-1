@@ -9,18 +9,3 @@ export default {
 export const searchForm = () => {
   return <SearchForm searchFunction={action('Search')} />
 }
-
-export const test = () => {
-  return (
-    <div>
-      <select
-        multiple
-        onChange={(event) => action('change')(event.target.value)}
-      >
-        <option value={'test1'}>First option</option>
-        <option value={'test2'}>Second option</option>
-        <option value={'test3'}>Third option</option>
-      </select>
-    </div>
-  )
-}

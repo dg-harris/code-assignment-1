@@ -3,6 +3,9 @@
   width: 100%;
   padding-left: 5vw;
   border-left: solid rgb(245, 245, 245);
+  grid-area: saved-links;
+  text-align: left;
+  margin-top: 5vh;
 }
 .saved-image-link {
   display: flex;
