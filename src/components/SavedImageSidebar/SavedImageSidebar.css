@@ -10,9 +10,13 @@
   font-size: 1rem;
   margin-top: 1rem;
 }
+.saved-image-link i {
+  margin-left: 1rem;
+}
 .saved-image-link a {
-  color: 'rgb(47, 22, 173)';
-  text-decoration: none;
+  color: rgb(47, 22, 173);
+  font-size: 1.5rem;
+  margin-top: 1rem;
 }
 .saved-image-link img {
   position: relative;
