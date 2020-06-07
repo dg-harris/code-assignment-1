@@ -16,6 +16,13 @@ export const SearchForm: React.FC<SearchFormProps> = ({ searchFunction }) => {
       <Input
         onChange={(event) => setKeywordValue(event.target.value)}
         placeholder="Keyword..."
+        input={
+          <input
+            onKeyDown={(event) =>
+              event.key === 'Enter' ? submitSearch() : null
+            }
+          />
+        }
       />
       <CategoryDropdown onChange={setCategoryValue} selected={categoryValue} />
       <Button onClick={submitSearch} className="search-button">

@@ -18,4 +18,16 @@ describe('Search Form', () => {
     expect(searchMock.mock.calls.length).toBe(1)
     expect(searchMock.mock.calls[0]).toEqual(['test_keyword', 'backgrounds'])
   })
+  it('performs a search with the set keyword when enter is pressed in the keyword field', async () => {
+    const searchMock = jest.fn()
+    const view = render(<SearchForm searchFunction={searchMock} />)
+    const keywordField = await view.getByPlaceholderText('Keyword...')
+    const searchButton = await view.getByText('Search')
+    fireEvent.change(keywordField, { target: { value: 'test_keyword' } })
+    fireEvent.keyDown(keywordField, { event: { key: 'Enter' } })
+
+    fireEvent.click(searchButton)
+    expect(searchMock.mock.calls.length).toBe(1)
+    expect(searchMock.mock.calls[0]).toEqual(['test_keyword', ''])
+  })
 })

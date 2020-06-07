@@ -1,3 +1,13 @@
+# Pixabay very simple search
+
+Very simple application that retrieves images from the pixabay api and displays them.
+
+## Storybook
+
+components can be tested locally using story book `npm run storybook`
+
+# Create React App
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
