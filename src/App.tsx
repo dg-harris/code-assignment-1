@@ -35,25 +35,29 @@ function App() {
   return (
     <div className="App">
       <ToastContainer />
-      <SearchForm searchFunction={searchFunction} />
-      {isLoading && (
-        <div className="searched-images">
-          <Segment style={{ height: '100%', width: '100%' }}>
-            <Dimmer active>
-              <Loader indeterminate>Preparing Images</Loader>
-            </Dimmer>
-          </Segment>
-        </div>
-      )}
-      {!isLoading && (
-        <SearchedImages
-          images={images}
-          savedImages={savedImages}
-          onSave={saveImage}
-          onRemove={removeSavedImage}
-        />
-      )}
-      <SavedImageSidebar savedImages={savedImages} />
+      <div className="search-area">
+        <SearchForm searchFunction={searchFunction} />
+        {isLoading && (
+          <div className="searched-images">
+            <Segment style={{ height: '100%', width: '100%' }}>
+              <Dimmer active>
+                <Loader indeterminate>Preparing Images</Loader>
+              </Dimmer>
+            </Segment>
+          </div>
+        )}
+        {!isLoading && (
+          <SearchedImages
+            images={images}
+            savedImages={savedImages}
+            onSave={saveImage}
+            onRemove={removeSavedImage}
+          />
+        )}
+      </div>
+      <div className="saved-link-area">
+        <SavedImageSidebar savedImages={savedImages} />
+      </div>
     </div>
   )
 }

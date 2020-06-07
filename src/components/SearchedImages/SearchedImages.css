@@ -3,11 +3,9 @@
   grid-area: search-results;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: left;
   padding: 0 10%;
   margin-top: 48px;
-  overflow: scroll;
 }
 
 .search-result {
