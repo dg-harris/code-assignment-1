@@ -6,6 +6,13 @@ const apiKey = process.env.REACT_APP_PIXABAY_API_KEY
 const apiUrl = process.env.REACT_APP_PIXABAY_API_URL
 const pageSize = 10
 
+/**
+ * service for making an image search request to pixabay and returning the results as a PixabayImage
+ * whitespace is trimmed from the keyword search
+ * the pixabay api handles case-insensitivity
+ * @param keyword Search term for pixabay image search
+ * @param category Pixabay category to restrict search by
+ */
 export const searchPixabayImages = async (
   keyword: string,
   category: string
@@ -15,7 +22,7 @@ export const searchPixabayImages = async (
     per_page: pageSize,
   }
   if (keyword && keyword !== '') {
-    params.q = keyword
+    params.q = keyword.trim();
   }
   if (category && category !== '') {
     params.category = category

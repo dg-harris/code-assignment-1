@@ -55,7 +55,7 @@ function App() {
           />
         )}
       </div>
-      <div className="saved-link-area">
+      <div>
         <SavedImageSidebar savedImages={savedImages} />
       </div>
     </div>
